@@ -7,10 +7,11 @@ if (typeof(django) !== 'undefined' && typeof(django.jQuery) !== 'undefined') {
             $('.cancel-link').click(function(e) {
                 e.preventDefault();
                 var parentWindow = window.parent;
-                if (parentWindow && typeof(parentWindow.dismissRelatedObjectModal) === 'function' && parentWindow !== window) {
+                if (parentWindow && typeof(parentWindow.dismissRelatedObjectModal) != 'function' && parentWindow !== window) {
                     parentWindow.dismissRelatedObjectModal();
                 } else {
                     // fallback to default behavior
+                    
                     window.history.back();
                 }
                 return false;

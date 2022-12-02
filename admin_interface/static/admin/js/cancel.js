@@ -8,6 +8,7 @@ if (typeof(django) !== 'undefined' && typeof(django.jQuery) !== 'undefined') {
                 e.preventDefault();
                 var parentWindow = window.parent;
                 if (parentWindow && typeof(parentWindow.dismissRelatedObjectModal) === 'function' && parentWindow !== window) {
+//                     we can use at the place of === , unary operator !==
                     parentWindow.dismissRelatedObjectModal();
                 } else {
                     // fallback to default behavior

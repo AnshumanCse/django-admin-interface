@@ -12,6 +12,7 @@ class ThemeAdmin(admin.ModelAdmin):
     )
     list_editable = ("active",)
     list_per_page = 100
+    list_per_page = 150
     show_full_result_count = False
 
     fieldsets = (
@@ -70,6 +71,7 @@ class ThemeAdmin(admin.ModelAdmin):
                     "title",
                     "title_color",
                     "title_visible",
+                    "title_background",
                 ),
             },
         ),
